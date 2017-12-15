@@ -1,0 +1,45 @@
+$blue:    #549DE3 !default; // custom
+$purple:  #6774DF !default; // primary
+$red:     #ff7076 !default; // custom
+$yellow:  #F5B666 !default; // custom
+$green:   #7DC668 !default; // custom
+$cyan:    #5dd2bc !default; // custom
+
+
+$theme-colors: () !default;
+
+
+$theme-colors: map-merge((
+  primary: $purple,
+  primary-dark: #36384C,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  body-bg: rgba(239,244,248,1),
+  border-color: #E2E8EE,
+  text-color: #424770,
+  link-color: $blue,
+  facebook: #3B5998,
+  twitter: #00ACED,
+  instagram: #E4405F,
+  dribbble: #EA4C89,
+  gray: rgba(0,0,0,.84)
+), $theme-colors);
+
+
+// CUSTOM STUFF TO BE MOVED
+$body-bg: theme-color("body-bg");
+$border-color: theme-color("border-color");
+$hr-border-color: $border-color;
+$body-color: theme-color("text-color");
+$link-color:  theme-color("link-color");
+$bg-facebook: theme-color("facebook");
+$bg-twitter: theme-color("twitter");
+$bg-instagram: theme-color("instagram");
+$bg-dribbble: theme-color("dribbble");
+
+// SIDEBAR
+$border-color: #E2E8EE;
+
+$dropdown-link-active-color: #ffffff !default;

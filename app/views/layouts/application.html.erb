@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>FlowBaseRails</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex flex-column position-relative h-100">
+      <%= render 'layouts/navbar' %>
+
+      <div class="mdk-drawer-layout js-mdk-drawer-layout" fullbleed push has-scrolling-region>
+          <div class="mdk-drawer-layout__content mdk-header-layout__content--scrollable">
+            <!-- CONTENT BODY -->
+            <div class="container-fluid">
+              <%= yield %>
+            </div>
+          </div>
+
+          <!-- drawer -->
+          <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+              <div class="mdk-drawer__content">
+                  <div class="mdk-drawer__inner">
+                    <%= render 'layouts/sidebar' %>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+    </div>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </body>
 </html>

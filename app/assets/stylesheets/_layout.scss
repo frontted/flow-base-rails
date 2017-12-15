@@ -1,0 +1,23 @@
+html {overflow: hidden; height: 100%;}
+body { height: 100%;}
+
+.container-fluid,.container {
+  & > .card-deck > .card, .page-section,  {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.container-wrapper {
+  padding: $grid-gutter-width;
+}
+
+.mdk-drawer-layout__content {
+   > .container:first-of-type,
+   > .container-fluid:first-of-type,
+   > .container:first-of-type,
+   > .bg-white >
+   .container:first-of-type {
+    padding-top: $grid-gutter-width;
+  }
+  > .container { padding-bottom: $navbar-height; }
+}

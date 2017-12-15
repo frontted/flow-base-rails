@@ -1,0 +1,121 @@
+@import './drawer--dark';
+
+.mdk-drawer__inner {
+    height: 100%;
+    overflow-y: auto;
+    text-align: initial;
+}
+
+nav.drawer {
+  overflow-y: scroll;
+  height: 100%;
+
+
+  text-align: initial;
+  &:not([data-simplebar]) {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .drawer-heading {
+    font-weight: bold;
+    margin: 0 0 $spacer/3 $spacer/2;
+  }
+  .drawer-spacer { padding: $spacer $spacer/2; }
+
+  .drawer-menu {
+    list-style: none;
+    padding-left:0;
+    margin-bottom: $spacer;
+    .drawer-menu-item {
+      position: relative;
+      &:last-of-type { border-bottom-color: transparent; }
+
+      [data-toggle=collapse] {
+        &::after {
+          font-family: "Material Icons";
+          content: "remove_circle_outline";
+          -webkit-font-feature-settings: 'liga';
+          position: absolute;
+          right: $spacer/2;
+          top: 0;
+          display: block;
+          font-size: 1.1rem;
+          font-weight:300;
+        }
+        &.collapsed::after {
+          content: "add_circle_outline";
+        }
+      }
+
+      .drawer-menu-text { margin-left: $spacer * 2; }
+      a {
+        display: block;
+        height: 40px;
+        line-height:40px;
+        padding: 0 $spacer/2;
+        font-weight: bold;
+        text-decoration: none;
+        .material-icons {
+          position: absolute;
+          line-height: 40px;
+          top: 0px;
+        }
+      }
+      a:hover { text-decoration:none; }
+      > ul {
+        list-style: none;
+        margin-left: $spacer;
+        padding-left:0;
+        > .drawer-menu-item {
+          border-bottom:0;
+          a {
+            margin-left: $spacer;
+            font-weight: 400;
+            height: 32px;
+            line-height:32px;
+            &:after {
+              width: 10px;
+              height: 1px;
+              top: 50%;
+              margin-top:-1px;
+              position:absolute;
+              left:0;
+              content: '';
+            }
+          }
+
+          &:after {
+            position:absolute;
+            width:1px;
+            top:0;
+            bottom:0;
+            content: '';
+          }
+          &:last-of-type {
+            margin-bottom: $spacer/2;
+            &:after { bottom:50%; }
+          }
+          &.active a {
+            font-weight:bold;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  .list-group-item { background-color: transparent; }
+
+  .drawer-activity {
+    font-size: $font-size-base;
+    line-height: 18px;
+    .material-icons { font-size: 16px; position: relative; top:-2px; }
+    .list-dot {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+  }
+}

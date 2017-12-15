@@ -1,0 +1,57 @@
+<nav class="drawer drawer--dark">
+  <div class="drawer-spacer drawer-spacer-border">
+    <div class="media align-items-center">
+      <img src="<%= image_path('avatars/andrew-robles-300868.jpg')%>" class="img-fluid rounded-circle mr-2" width="40" alt="">
+      <div class="media-body" style="line-height: 1.2">
+        <a href="#"><strong>Andrew Robles</strong></a>
+        <div>Site Manager</div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle dropdown-clear-caret" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons">more_vert</i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a href="#" class="dropdown-item dropdown-item-action">View Profile</a>
+          <a href="#" class="dropdown-item dropdown-item-action">Edit Account</a>
+          <a href="#" class="dropdown-item dropdown-item-action">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DROPDOWN -->
+  <div class="drawer-spacer">
+    <div class="dropdown">
+      <button class="btn btn-block dropdown-toggle text-left text-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span>Page Layouts</span>
+      </button>
+      <div class="dropdown-menu w-100" aria-labelledby="companiesDropdown">
+        <a href="#" class="dropdown-item dropdown-item-action">Default Layout (fluid)</a>
+        <a href="#" class="dropdown-item dropdown-item-action">Sidebar - Light Color</a>
+      </div>
+    </div>
+  </div>
+  <!-- HEADING -->
+  <div class="drawer-heading">
+    Menu
+  </div>
+  <!-- MENU -->
+  <ul class="drawer-menu" id="mainMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item active">
+      <a href="#">
+        <i class="material-icons">home</i>
+        <span class="drawer-menu-text"> Dashboard</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#dashboardMenu" aria-controls="collapseOne" aria-expanded="false"  class="collapsed">
+        <i class="material-icons">dashboard</i>
+        <span class="drawer-menu-text"> Submenu</span>
+      </a>
+      <ul class="collapse" id="dashboardMenu">
+        <li class="drawer-menu-item active"><a href="#">Dashboard</a></li>
+        <li class="drawer-menu-item"><a href="#">Extra Menu</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
