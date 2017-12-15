@@ -1,24 +1,7 @@
-# README
+# flow-base-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 5 application boilerplate using Flow PRO barebones.
 
-Things you may want to cover:
+# FLOW PRO - Admin Dashboard
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Check out the PRO version of FLOW: https://themeforest.net/item/flow-pro-bootstrap-4-admin-dashboard/20980351?ref=Frontted
